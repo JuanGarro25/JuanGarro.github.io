@@ -1,0 +1,137 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Garro - Mi Página Futurista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <header>
+    <h1> Juan Garro </h1>
+    <p> Mi Página Personal </p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acercade.html">Acerca de</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="presentacion">
+      <h2>Bienvenido</h2>
+      <p>Este es mi espacio digital donde comparto mi aprendizaje y mis proyectos. ✨</p>
+    </section>
+
+    <section>
+  <h2>Aprendizajes</h2>
+  <div class="proyectos">
+    <div class="card" onclick="mostrarEjemplo('Python')">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Logo Python">
+      <h3>Python</h3>
+      <p>Estoy usando Python para crear funcionalidades de mi página.</p>
+    </div>
+    <div class="card" onclick="mostrarEjemplo('HTML')">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Logo HTML">
+      <h3>HTML</h3>
+      <p>Construyo la estructura de esta página con HTML5.</p>
+    </div>
+    <div class="card" onclick="mostrarEjemplo('CSS')">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Logo CSS">
+      <h3>CSS</h3>
+      <p>Le doy estilo y diseño moderno a mi página con CSS3.</p>
+    </div>
+  </div>
+
+  <!-- Contenedor para mostrar el ejemplo -->
+  <div id="ejemploFuncion" class="ejemplo-funcion" style="display: none;">
+    <h3 id="tituloFuncion"></h3>
+    <p id="descripcionFuncion"></p>
+    <img id="imagenFuncion" src="" alt="Imagen de ejemplo" style="display:none;">
+  </div>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>© 2025 Juan Garro - Universidad Nacional del COMAHUE</p>
+  </footer>
+
+  <!-- Modal de imagen -->
+<div id="modalImagen" class="modal-imagen">
+  <div class="modal-header">
+    <h2 id="modalTitulo">Ejemplo</h2>
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+  </div>
+  <div class="modal-body">
+    <img id="imagenModal" src="" alt="Ejemplo">
+  </div>
+</div>
+
+<script>
+const ejemplosFuncion = {
+  Python: {
+    descripcion: "Python se usa para crear la lógica y automatización de la página.",
+    imagen: "img/PYTHON.png"
+  },
+  HTML: {
+    descripcion: "HTML define la estructura de la página, como títulos, párrafos y enlaces.",
+    imagen: "img/HTML.png"
+  },
+  CSS: {
+    descripcion: "CSS aplica estilos visuales: colores, fuentes, diseño y animaciones.",
+    imagen: "img/CSS.png"
+  }
+};
+
+function mostrarEjemplo(lenguaje) {
+  const contenedor = document.getElementById('ejemploFuncion');
+  const titulo = document.getElementById('tituloFuncion');
+  const descripcion = document.getElementById('descripcionFuncion');
+  const imagen = document.getElementById('imagenFuncion');
+
+  titulo.textContent = `Ejemplo de ${lenguaje}`;
+  descripcion.textContent = ejemplosFuncion[lenguaje].descripcion;
+  imagen.src = ejemplosFuncion[lenguaje].imagen;
+  imagen.style.display = "block"; // mostrar imagen
+
+  contenedor.style.display = 'block'; // mostrar contenedor
+}
+
+function cerrarModal(){
+  document.getElementById('modalImagen').style.display = 'none';
+}
+
+// Zoom con la rueda del mouse
+document.addEventListener("wheel", function(event){
+  const modal = document.getElementById('modalImagen');
+  if(modal.style.display === "flex"){
+    const img = document.getElementById('imagenModal');
+    if(event.deltaY < 0){
+      zoomLevel += 0.1; // acercar
+    } else {
+      zoomLevel = Math.max(0.2, zoomLevel - 0.1); // alejar
+    }
+    img.style.transform = `scale(${zoomLevel})`;
+    event.preventDefault();
+  }
+}, { passive: false });
+
+// Cerrar modal al hacer clic fuera de la imagen
+window.onclick = function(event){
+  const modal = document.getElementById('modalImagen');
+  if(event.target == modal){
+    modal.style.display = 'none';
+  }
+}
+</script>
+
+</body>
+</html>
