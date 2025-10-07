@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Juan Garro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    main {
+      background: #ffffff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+
+    h2 {
+      text-align: left;
+      color: #003366;
+    }
+
+    form {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea, datalist {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+
+    /* Grupo de radios */
+    fieldset {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    .grupo-radio, .grupo-check {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .grupo-radio label,
+    .grupo-check label {
+      font-weight: normal;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #003366;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0055aa;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> Juan Garro </h1>
+    <p> Contacto </p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acercade.html">Acerca de</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Contacto</h2>
+    <a href="index.html">Volver a la página principal</a>
+
+    <form>
+      <label for="nombre">Nombre (requerido):</label>
+      <input type="text" id="nombre" name="nombre" maxlength="20" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" maxlength="20">
+
+      <label for="email">Email (requerido):</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" onfocus="this.placeholder=''" onblur="this.placeholder='Ingrese su teléfono'">
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" min="16" max="120">
+
+      <label for="direccion">Dirección:</label>
+      <textarea id="direccion" name="direccion" rows="2"></textarea>
+
+      <label for="provincia">Provincia:</label>
+      <input list="listaProvincias" id="provincia" name="provincia">
+      <datalist id="listaProvincias">
+        <option value="Cordoba">
+        <option value="Salta">
+        <option value="Jujuy">
+        <option value="La Pampa">
+        <option value="Buenos Aires">
+        <option value="Neuquén">
+        <option value="Río Negro">
+        <option value="Chubut">
+        <option value="Santa Cruz">
+        <option value="Tierra del Fuego">
+      </datalist>
+
+      <label for="cp">Código Postal:</label>
+      <input type="text" id="cp" name="cp" pattern="^[A-Z]\d{4}[A-Z]{3}$" title="Formato: A1234ABC">
+
+      <fieldset>
+        <legend>Método preferido de contacto:</legend>
+        <div class="grupo-radio">
+          <label><input type="radio" name="contacto" value="Correo electrónico" checked> Correo electrónico</label>
+          <label><input type="radio" name="contacto" value="Correo postal"> Correo postal</label>
+          <label><input type="radio" name="contacto" value="Teléfono"> Teléfono</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tipo de suscripción:</legend>
+        <div class="grupo-check">
+          <label><input type="checkbox" name="suscripcion" value="Noticias"> Noticias</label>
+          <label><input type="checkbox" name="suscripcion" value="Promociones"> Promociones</label>
+          <label><input type="checkbox" name="suscripcion" value="Alertas" checked> Alertas</label>
+          <label><input type="checkbox" name="suscripcion" value="Eventos"> Eventos</label>
+        </div>
+      </fieldset>
+
+      <button type="button">Cargar</button>
+    </form>
+
+    <table>
+      <tr><th>Campo</th><th>Valor</th></tr>
+      <tr><td>Nombre</td><td></td></tr>
+      <tr><td>Apellido</td><td></td></tr>
+      <tr><td>Email</td><td></td></tr>
+      <tr><td>Teléfono</td><td></td></tr>
+      <tr><td>Edad</td><td></td></tr>
+      <tr><td>Dirección</td><td></td></tr>
+      <tr><td>Provincia</td><td></td></tr>
+      <tr><td>Código Postal</td><td></td></tr>
+      <tr><td>Método de contacto</td><td></td></tr>
+      <tr><td>Suscripción</td><td></td></tr>
+    </table>
+  </main>
+
+  <footer>
+    <p>© 2025 Juan Garro - Universidad Nacional del COMAHUE</p>
+  </footer>
+
+</body>
+</html>
