@@ -1,7 +1,10 @@
-<!-- acercade.html -->
+
+<!-- >>> acercade.html <<< -->
+
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <h1> Juan Garro </h1>
+<a id="top"></a>
+<div class="espaciador"></div>
+
+  <header class="header-fijo">
+    <h1 class="titulo-principal">
+        Juan Garro
+      <img src="img/curza.png" alt="Logo CURZA" class="logo-curza" id="logoCurza" />
+    </h1>
     <p> Acerca de </p>
   </header>
 
@@ -28,8 +38,10 @@
   <img src="img/foto.jpg" alt="Foto de Juan Garro" class="foto">
   <div class="bio-text">
     <h2>Biografía</h2>
+    <article class="acerca-scroll">
     <p>¡Hola! Soy Juan Garro, estudiante de la Tecnicatura Universitaria en Desarrollo Web en la Universidad Nacional del COMAHUE, sede Viedma, Río Negro.</p>
     <p>Me apasiona crear páginas web modernas y aprender nuevas tecnologías en programación.</p>
+    </article>
   </div>
   </section>
     <section class="habilidades">
@@ -62,12 +74,18 @@
       <img src="img/threads.svg" alt="threads">
     </a>
   </div>
-</section>
+  </section>
 
   </main>
 
   <footer>
     <p>© 2025 Juan Garro - Universidad Nacional del COMAHUE</p>
   </footer>
+
+<a class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Volver arriba">
+  <img src="img/flecha.png" alt="Volver arriba">
+</a>
+
+
 </body>
 </html>

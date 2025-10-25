@@ -1,4 +1,6 @@
-<!-- index.html -->
+
+<!-- >>> index.html <<< -->
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -11,10 +13,16 @@
 
 </head>
 <body>
-  <header>
-    <h1> Juan Garro </h1>
-    <p> Mi Página Personal </p>
-  </header>
+<a id="top"></a>
+<div class="espaciador"></div>
+
+<header class="header-fijo">
+  <h1 class="titulo-principal">
+    Juan Garro
+    <img src="img/curza.png" alt="Logo CURZA" class="logo-curza" id="logoCurza" />
+  </h1>
+  <p>Mi Página Personal</p>
+</header>
 
   <nav>
     <ul>
@@ -50,7 +58,6 @@
     </div>
   </div>
 
-  <!-- Contenedor para mostrar el ejemplo -->
   <div id="ejemploFuncion" class="ejemplo-funcion" style="display: none;">
     <h3 id="tituloFuncion"></h3>
     <p id="descripcionFuncion"></p>
@@ -58,14 +65,17 @@
   </div>
 </section>
 
-
   </main>
 
   <footer>
     <p>© 2025 Juan Garro - Universidad Nacional del COMAHUE</p>
   </footer>
 
-  <!-- Modal de imagen -->
+<a class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Volver arriba">
+  <img src="img/flecha.png" alt="Volver arriba">
+</a>
+
+
 <div id="modalImagen" class="modal-imagen">
   <div class="modal-header">
     <h2 id="modalTitulo">Ejemplo</h2>
@@ -101,37 +111,48 @@ function mostrarEjemplo(lenguaje) {
   titulo.textContent = `Ejemplo de ${lenguaje}`;
   descripcion.textContent = ejemplosFuncion[lenguaje].descripcion;
   imagen.src = ejemplosFuncion[lenguaje].imagen;
-  imagen.style.display = "block"; // mostrar imagen
+  imagen.style.display = "block"; 
 
-  contenedor.style.display = 'block'; // mostrar contenedor
+  contenedor.style.display = 'block';
 }
 
 function cerrarModal(){
   document.getElementById('modalImagen').style.display = 'none';
 }
 
-// Zoom con la rueda del mouse
+
 document.addEventListener("wheel", function(event){
   const modal = document.getElementById('modalImagen');
   if(modal.style.display === "flex"){
     const img = document.getElementById('imagenModal');
     if(event.deltaY < 0){
-      zoomLevel += 0.1; // acercar
+      zoomLevel += 0.1; 
     } else {
-      zoomLevel = Math.max(0.2, zoomLevel - 0.1); // alejar
+      zoomLevel = Math.max(0.2, zoomLevel - 0.1); 
     }
     img.style.transform = `scale(${zoomLevel})`;
     event.preventDefault();
   }
 }, { passive: false });
 
-// Cerrar modal al hacer clic fuera de la imagen
+
 window.onclick = function(event){
   const modal = document.getElementById('modalImagen');
   if(event.target == modal){
     modal.style.display = 'none';
   }
 }
+</script>
+
+<script>
+  const logo = document.getElementById('logoCurza');
+  function girarLogo() {
+    logo.classList.remove('giroY');
+    void logo.offsetWidth;
+    logo.classList.add('giroY');
+  }
+  window.addEventListener('load', girarLogo);
+  document.querySelector('.titulo-principal').addEventListener('click', girarLogo);
 </script>
 
 </body>
