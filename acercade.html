@@ -35,57 +35,75 @@
 
   <main>
     <section class="bio-container">
-  <img src="img/foto.jpg" alt="Foto de Juan Garro" class="foto">
-  <div class="bio-text">
-    <h2>Biografía</h2>
-    <article class="acerca-scroll">
-    <p>¡Hola! Soy Juan Garro, estudiante de la Tecnicatura Universitaria en Desarrollo Web en la Universidad Nacional del COMAHUE, sede Viedma, Río Negro.</p>
-    <p>Me apasiona crear páginas web modernas y aprender nuevas tecnologías en programación.</p>
-    </article>
-  </div>
-  </section>
+      <img src="img/foto.jpg" alt="Foto de Juan Garro" class="foto">
+      <div class="bio-text">
+        <h2>Biografía</h2>
+
+        <article class="acerca-scroll">
+          <p>¡Hola! Soy Juan Garro, estudiante de la Tecnicatura Universitaria en Desarrollo Web en la Universidad Nacional del COMAHUE, sede Viedma, Río Negro.</p>
+          <p>Me apasiona crear páginas web modernas y aprender nuevas tecnologías en programación.<span id="puntos">..</span></p>
+
+          <div id="textoExtra" style="display:none;">
+            <p><br>
+              Tengo conocimientos en HTML, CSS, Python y aprendiendo frameworks modernos para el desarrollo de interfaces web.
+              Busco mejorar constantemente mis habilidades y potenciar mi aprendizaje.
+            </p><br>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan facilisis eros,
+              ac porttitor nulla vulputate ut. Suspendisse potenti. Duis bibendum felis sit amet justo sagittis,
+              a tempor turpis ullamcorper. Integer elementum turpis eget turpis finibus vehicula.
+            </p><br>
+          </div>
+
+          <button id="btnLeerMas" 
+            style="margin-top:4px; padding:6px 12px; background-color:#4da6ff; border:none; border-radius:6px; color:white; cursor:pointer;">
+            Leer más
+          </button>
+        </article>
+      </div>
+    </section>
+
     <section class="habilidades">
       <h2>Habilidades</h2>
       <p>HTML, CSS, Python, y aprendizaje continuo en desarrollo web y diseño de interfaces modernas.</p>
     </section>
 
     <section class="redes">
-  <h2>Redes Sociales</h2>
-  <div class="social-links">
-    <a href="https://github.com/JuanGarro25" target="_blank" class="icon-3d">
-      <img src="img/github.svg" alt="GitHub">
-    </a>
-    <a target="_blank" class="icon-3d">
-      <img src="img/linkedin.svg" alt="LinkedIn">
-    </a>
-    <a href="https://www.instagram.com/elcolojuan?igsh=dnFzc3F4Y2N2ZDNs" target="_blank" class="icon-3d">
-    <img src="img/instagram.svg" alt="Instagram">
-    </a>
-    <a target="_blank" class="icon-3d">
-      <img src="img/twitter.svg" alt="Twitter">
-    </a>
-    <a href="https://www.facebook.com/share/1EyfT9H3Z9/" target="_blank" class="icon-3d">
-      <img src="img/facebook.svg" alt="Facebook">
-    </a>
-    <a href="https://t.me/JuanGarro" target="_blank" class="icon-3d">
-      <img src="img/telegram.svg" alt="Telegram">
-    </a>
-    <a target="_blank" class="icon-3d">
-      <img src="img/threads.svg" alt="threads">
-    </a>
-  </div>
-  </section>
-
+      <h2>Redes Sociales</h2>
+      <div class="social-links">
+        <a href="https://github.com/JuanGarro25" target="_blank" class="icon-3d">
+          <img src="img/github.svg" alt="GitHub">
+        </a>
+        <a target="_blank" class="icon-3d">
+          <img src="img/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/elcolojuan?igsh=dnFzc3F4Y2N2ZDNs" target="_blank" class="icon-3d">
+          <img src="img/instagram.svg" alt="Instagram">
+        </a>
+        <a target="_blank" class="icon-3d">
+          <img src="img/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://www.facebook.com/share/1EyfT9H3Z9/" target="_blank" class="icon-3d">
+          <img src="img/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://t.me/JuanGarro" target="_blank" class="icon-3d">
+          <img src="img/telegram.svg" alt="Telegram">
+        </a>
+        <a target="_blank" class="icon-3d">
+          <img src="img/threads.svg" alt="threads">
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 Juan Garro - Universidad Nacional del COMAHUE</p>
   </footer>
 
-<a class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Volver arriba">
-  <img src="img/flecha.png" alt="Volver arriba">
-</a>
+  <a class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Volver arriba">
+    <img src="img/flecha.png" alt="Volver arriba">
+  </a>
 
-
+  <script src="script.js"></script>
 </body>
 </html>
