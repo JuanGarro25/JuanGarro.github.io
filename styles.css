@@ -636,3 +636,198 @@ td {
 main.contacto th {
   background-color: #f0f0f0;
 }
+
+
+body.juego {
+    background: #0b1320;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+body.juego h1 {
+    margin-top: 10px;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+body.juego #inicio {
+    padding-top: 80px;
+}
+
+body.juego #textoInicio {
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+body.juego #btnInicio {
+    margin: 80px auto 0 auto; 
+    background: #00cc44;
+    padding: 15px 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .2s;
+    color: white;
+    display: block;
+}
+
+
+body.juego #btnInicio:hover {
+    transform: scale(1.1);
+    background: #00e65c;
+}
+
+body.juego #btnSalirInicio {
+    margin-top: 80px;
+    background: #cc0000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.juego #btnSalirInicio:hover {
+    background: #ff1a1a;
+}
+
+body.juego #contenedorJuego {
+    display: none;
+    padding: 20px;
+}
+
+body.juego #tablero {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    column-gap: 6px;
+    row-gap: 6px;
+}
+
+body.juego .carta {
+    background: #2464c5;
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .1s;
+    transform-style: preserve-3d;
+}
+
+body.juego .carta span {
+    transform: rotateY(180deg);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+body.juego .visible span {
+    opacity: 1;
+}
+
+body.juego .oculta {
+    transform: rotateY(0deg);
+}
+
+body.juego .visible {
+    transform: rotateY(180deg);
+}
+
+body.juego #panelInfo {
+    margin-top: 30px; 
+    margin-bottom: 20px;
+}
+
+body.juego #btnSalir {
+    background: #cc0000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+body.juego #btnSalir:hover {
+    background: #ff1a1a;
+}
+
+body.juego #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+body.juego #modalContenido {
+    background: #113645;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 350px;
+}
+
+body.juego #modalContenido h2 {
+    color: #00ff9f;
+    margin-bottom: 10px;
+}
+
+body.juego #modalContenido button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+body.juego #modalReiniciar {
+    background: #0066ff;
+}
+
+body.juego #modalReiniciar:hover {
+    background: #1a75ff;
+}
+
+body.juego #modalSalir {
+    background: #cc0000;
+}
+
+body.juego #modalSalir:hover {
+    background: #ff1a1a;
+}
+
+body.juego .info-icono {
+    background: rgba(0, 255, 255, 0.07);
+    border: 2px solid #dfae29;
+    padding: 18px 22px;
+    max-width: 750px;
+    margin: 25px auto 30px auto;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #e6e6e6;
+    box-shadow: 0 0 12px rgba(0, 238, 255, 0.25);
+    text-align: center;
+}
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Memoria</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="juego">
+
+    <h1>🧠 Juego de Memoria 🧠</h1>
+
+    <div id="inicio">
+            <div class="info-juego info-icono">
+            💡 “Poné a prueba tu Memoria: Emparejá todas las Cartas lo más rápido posible...” 💡
+            </div>
+
+        <button id="btnInicio">Comenzar Juego</button>
+
+        <button id="btnSalirInicio" onclick="window.location.href='index.html'">Salir</button>
+    </div>
+
+    <div id="contenedorJuego">
+
+        <div id="panelInfo">
+            ⏳ Tiempo: <span id="tiempo">0</span> s |
+            🖱️ Movimientos: <span id="movs">0</span>
+        </div>
+
+        <div id="tablero"></div>
+
+        <button id="btnSalir" onclick="window.location.href='index.html'">Salir</button>
+    </div>
+
+    <div id="modal">
+        <div id="modalContenido">
+            <h2>🎉🎉 ¡GANASTE! 🎉🎉</h2>
+            <p id="datosFinales"></p>
+
+            <button id="modalReiniciar">Reiniciar</button>
+            <button id="modalSalir" onclick="window.location.href='index.html'">Salir</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
